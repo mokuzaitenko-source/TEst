@@ -1,46 +1,75 @@
-[![banner](assets/banner.png)](http://introtodeeplearning.com)
+# ACA Learning Platform (Portfolio Project)
 
-This repository contains all of the code and software labs for [MIT Introduction to Deep Learning](http://introtodeeplearning.com)! All lecture slides and videos are available on the program website.
+This repository contains my applied work from Intro to Deep Learning plus a custom ACA web app that turns core Python topics into an interactive learning experience.
 
-# Instructions
-MIT Introduction to Deep Learning software labs are designed to be completed at your own pace. At the end of each of the labs, there will be instructions on how you can submit your materials as part of the lab competitions. These instructions include what information must be submitted and in what format.
+This project is positioned as a portfolio asset for interviews and applications.
 
-## Opening the labs in Google Colaboratory:
+## Why this project matters
 
-The 2026 Introduction to Deep Learning labs will be run in Google's Colaboratory, a Jupyter notebook environment that runs entirely in the cloud, so you don't need to download anything. To run these labs, you must have a Google account.
+- Shows end-to-end ownership: backend, frontend, testing, and documentation.
+- Demonstrates practical AI-adjacent engineering, not just notebook experiments.
+- Provides concrete code to discuss in interviews (architecture, tradeoffs, security, and testing).
 
-On this Github repo, navigate to the lab folder you want to run (`lab1`, `lab2`, `lab3`) and open the appropriate python notebook (\*.ipynb). Click the "Run in Colab" link on the top of the lab. That's it!
+## What is included
 
-## Running the labs
-Now, to run the labs, open the Jupyter notebook on Colab. Navigate to the "Runtime" tab --> "Change runtime type". In the pop-up window, under "Runtime type" select "Python 3", and under "Hardware accelerator" select "GPU". Go through the notebooks and fill in the `#TODO` cells to get the code to compile for yourself!
+- `aca/`: Flask app with lesson paths, in-browser code execution, and progress tracking.
+- `lab1/`, `lab2/`, `lab3/`: MIT Intro to Deep Learning lab materials and notebooks.
+- `xtra_labs/`: additional experiments.
+- `ACA_v4.2_CapabilityPolicy.json` and `ACA_v4.2_SchemaRegistry.yaml`: policy and schema artifacts used in ACA work.
 
+## Tech stack
 
-### MIT Deep Learning package
-You might notice that inside the labs we install the `mitdeeplearning` python package from the Python Package repository:
+- Backend: Python, Flask, Flask-WTF
+- Frontend: HTML, CSS, JavaScript
+- Testing: Flask test client (route and feature checks)
 
-`pip install mitdeeplearning`
+## Quick start
 
-This package contains convienence functions that we use throughout the course and can be imported like any other Python package.
+```powershell
+cd aca
+pip install -r requirements.txt
+python app.py
+```
 
-`>>> import mitdeeplearning as mdl`
+Open `http://localhost:5000`.
 
-We do this for you in each of the labs, but the package is also open source under the same license so you can also use it outside the class.
+## Validation
 
-## Lecture Videos
+```powershell
+cd aca
+python test_all_features.py
+```
 
-[<img src="assets/video_play.png" width="500">](https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1)
+## Interview talking points
 
-All lecture videos are available publicly online and linked above! Use and/or modification of lecture slides outside of MIT Introduction to Deep Learning must reference:
+- Built a modular Flask app that serves structured learning paths and lesson content.
+- Implemented safe server-side code execution patterns and error handling for user-submitted code.
+- Added progress tracking and route-level feature tests using Flask's test client.
+- Refactored UI and templates for a cleaner learning flow and reusable page structure.
 
-> © MIT Introduction to Deep Learning
->
-> http://introtodeeplearning.com
+## Repo map
 
-## License
-All code in this repository is copyright 2026 [MIT Introduction to Deep Learning](http://introtodeeplearning.com). All Rights Reserved.
+- `aca/app.py`: main web app and routes
+- `aca/templates/`: page templates
+- `aca/static/`: CSS and JavaScript assets
+- `aca/progress.py`: progress state logic
+- `aca/test_all_features.py`: integration-style smoke tests
 
-Licensed under the MIT License. You may not use this file except in compliance with the License. Use and/or modification of this code outside of MIT Introduction to Deep Learning must reference:
+## Publish to GitHub
 
-> © MIT Introduction to Deep Learning
->
-> http://introtodeeplearning.com
+From repo root:
+
+```powershell
+git add README.md
+git commit -m "docs: position ACA work as portfolio project"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
+```
+
+If `origin` already exists, use:
+
+```powershell
+git remote set-url origin <your-repo-url>
+git push -u origin main
+```
