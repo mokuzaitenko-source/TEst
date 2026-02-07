@@ -2,6 +2,8 @@
 
 Interactive Python learning platform built with Flask.
 
+This subproject is original application work and is the recommended area to demo in interviews.
+
 ## Features
 
 - Structured learning paths and lesson pages

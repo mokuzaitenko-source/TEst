@@ -6,6 +6,16 @@
 
 Portfolio project that combines deep-learning coursework with a production-style learning app.
 
+## Ownership And Attribution
+
+This repository contains both:
+
+- Original work by Alvin Tolbert (notably the `aca/` application and portfolio docs)
+- Upstream educational materials from MIT Introduction to Deep Learning and related lab content
+
+I do not claim authorship of upstream course content. I use it for learning and portfolio context with attribution.
+See `ATTRIBUTION.md` for details.
+
 ## Demo
 
 ![Project banner](assets/banner.png)
@@ -22,6 +32,18 @@ Portfolio project that combines deep-learning coursework with a production-style
 2. `DeepLearning_Roadmap.ipynb` - study and implementation roadmap
 3. `ACA_v4.2_CapabilityPolicy.json` - policy artifact from ACA work
 4. `ACA_v4.2_SchemaRegistry.yaml` - schema contract artifact from ACA work
+
+## Original Work In This Repo
+
+- `aca/app.py`
+- `aca/progress.py`
+- `aca/static/`
+- `aca/templates/`
+- `aca/test_all_features.py`
+- `PROFILE_README.md`
+- `PROFILE_SETUP.md`
+- `PROJECT_SHOWCASE.md`
+- `PORTFOLIO_ASSETS.md`
 
 ## Tech Stack
 
@@ -54,6 +76,7 @@ python test_all_features.py
 - Implemented server-side execution flow for user code with robust error handling
 - Added progress persistence and feature-level integration checks
 - Documented setup, test flow, and project map for fast reviewer onboarding
+- Clearly separated original work from upstream course assets for transparent portfolio presentation
 
 ## Repository Map
 
